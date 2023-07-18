@@ -1,0 +1,165 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora bitcoinheira para checksum de seed BIP-39 offline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+			background: #333333;
+			color: #ffffff;
+			link-color: #ffffff;
+		
+        }
+
+        h1 {
+            text-align: center;
+			color: #ffffff;
+        }
+		
+		h2 {
+			text-align: center;
+			font-size: 22px;
+			font-color: #ffffff;
+		}
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 45vh;
+        }
+
+        .tool {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #000;
+            border-radius: 8px;
+            max-width: 400px;
+            text-align: center;
+			background: #282828;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #ff5a00;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #F6911D;
+        }
+		
+		a:link {
+           color: orange;
+           text-decoration: none;
+         }
+
+        a:visited {
+           color: orange;
+           text-decoration: none;
+         }
+
+        a:hover {
+			color: yellow;
+			text-decoration: none;
+         }
+
+		a:active {
+			color: yellow;
+			text-decoration: underline;
+		 }
+    </style>
+</head>
+
+<body>
+    <h1>Calculadora bitcoinheira 🤘</br>para última palavra de seed BIP-39 offline</h1>
+    <div class="container">
+        <div class="tool">
+            <h2>Conversor BIN⚡HEX</h2><p></br></p>
+            <p><label for="binaryInput">Binário:</label></p>
+            <textarea id="binaryInput" placeholder="Insira o valor binário"></textarea>
+            <p><label for="hexInput">Hexadecimal:</label></p>
+            <textarea id="hexInput" placeholder="Insira o valor hexadecimal"></textarea>
+            <p><button onclick="convertBinToHex()">Converter BIN⚡HEX</button>
+            <button onclick="convertHexToBin()">Converter HEX⚡BIN</button></p>
+        </div>
+
+        <div class="tool">
+            <h2>Calculadora SHA-256🎲</h2><p></br></p>
+            <p><label for="hashInput">Texto HEX:</label></p>
+            <textarea id="hashInput" placeholder="Insira o texto em formato HEX"></textarea>
+            <p></br><button onclick="calculateHash()">Calcular hash SHA-256🎲</button></p>
+			<p></br><textarea id="hashResult" readonly placeholder="O resultado da função de hash aparecerá aqui"></textarea></p>
+        </div>
+    </div>
+		
+    <script>
+	// Funções de conversão HEX<>BIN
+        function convertBinToHex() {
+            const binaryInput = document.getElementById("binaryInput").value;
+            const hexValue = binToHex(binaryInput);
+            document.getElementById("hexInput").value = hexValue;
+        }
+
+        function convertHexToBin() {
+            const hexInput = document.getElementById("hexInput").value;
+            const binaryValue = hexToBin(hexInput);
+            document.getElementById("binaryInput").value = binaryValue;
+        }
+
+        function binToHex(binary) {
+            let hex = "";
+            for (let i = 0; i < binary.length; i += 4) {
+                let chunk = binary.substr(i, 4);
+                hex += parseInt(chunk, 2).toString(16);
+            }
+            return hex.toUpperCase();
+        }
+		
+		function hexToBin(hex) {
+            let binary = "";
+            for (let i = 0; i < hex.length; i++) {
+                const digit = parseInt(hex[i], 16).toString(2).padStart(4, '0');
+                binary += digit;
+            }
+            return binary;
+        }
+
+	//crypto.subtle.digest é um método disponível em ambientes JavaScript de navegadores modernos e faz parte do Web Crypto API.
+	//É uma maneira de calcular funções de hash criptográficas usando uma variedade de algoritmos, incluindo o bitcoinheiro SHA-256
+
+        function hexStringToArrayBuffer(hexString) {
+            const bytes = new Uint8Array(hexString.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
+            return bytes.buffer;
+        }
+
+        async function calculateHash() {
+            const hashInput = document.getElementById("hashInput").value;
+            const cleanedHashInput = hashInput.replace(/[^a-fA-F0-9]/g, ""); // Remove non-hex characters
+            const hashOutput = document.getElementById("hashResult");
+
+            try {
+                const data = hexStringToArrayBuffer(cleanedHashInput);
+                const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+                const hashArray = Array.from(new Uint8Array(hashBuffer));
+                const hashHex = hashArray.map(byte => ('0' + byte.toString(16)).slice(-2)).join('');
+                hashOutput.value = hashHex;
+            } catch (error) {
+                console.error(error);
+                hashOutput.value = "Ocorreu um erro ao calcular o hash.";
+            }
+        }
+    </script>
+	<p align="center">Montada por <a href="https://twitter.com/bitdov/">@bitdov</a> com ajuda de código open source</p>
+</body>
+</html>
