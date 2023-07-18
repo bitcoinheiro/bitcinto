@@ -3,6 +3,9 @@
 O Bitcinto de utilidades é uma coletânea de ferramentas bitcoinheiras para uso OFFLINE. A ideia é facilitar o download e uso dessas ferramentas. Todas as ferramentas são acompanhadas de arquivos de assinatura para verificação na pasta "verify".
 
 Cada ferramenta tem a sua própria licença e deve ser tratada por separado.  
+
+![bitcinto](https://github.com/bitcoinheiro/bitcinto/assets/50273260/56807560-33ae-4865-9474-b948865b2284)
+
 Estas são as ferramentas incluídas no pacote:  
 
 ## 1. Calculadora de checksum BIP39
