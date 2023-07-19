@@ -1,19 +1,22 @@
 # Bitcinto de utilidades bitcoinheiras
 
-O Bitcinto de utilidades é uma coletânea de ferramentas bitcoinheiras para uso OFFLINE. A ideia é facilitar o download e uso dessas ferramentas. Todas as ferramentas são acompanhadas de arquivos de assinatura para verificação na pasta "verify".
+O Bitcinto de utilidades é uma coletânea de ferramentas bitcoinheiras para uso OFFLINE. A ideia é facilitar o download e uso dessas ferramentas. Todas as ferramentas são acompanhadas de arquivos de assinatura para verificação na pasta "verify". Cada ferramenta tem a sua própria licença e deve ser tratada por separado.  
 
-Cada ferramenta tem a sua própria licença e deve ser tratada por separado.  
+O bitcinto bitcoinheiro é o companheiro ideal para utilizar em conjunto com o [sistema operacional Tails](https://tails.boum.org/index.pt.html) ou qualquer outra máquina airgap, de preferência com alguma distro Linux segura, com navegador de última geração (Firefox/Tor Browser) e Libreoffice Calc incluídos no pacote, que **jamais** terá conexão à internet.
+
+Após criação e verificação da seed, você pode exportar a seed de 12 ou 24 palavras para um dispositivo seguro (como uma hardwallet, por exemplo) para interagir com carteiras Bitcoin para PC ou celular conectadas à internet ou utilizar o próprio PC offline unicamente como dispositivo de assinatura - mantenha seu armazenamento fortemente criptografado.
 
 ![bitcinto](https://github.com/bitcoinheiro/bitcinto/assets/50273260/56807560-33ae-4865-9474-b948865b2284)
 
 Estas são as ferramentas incluídas no pacote:  
 
 ## 1. Calculadora de checksum BIP39
-Esquema montado por bitdov para cálculo de seed BIP39 completa jogando moedas ou inserindo bits.  
-Ótimo esquema para ser usado sozinho ou como complemento para o protocolo seedpicker.  
+Esquema montado por bitdov para cálculo de seed BIP39 completa jogando moedas par inserindo bits.  
+Baseada nos mesmos princípios, há também uma tabela de cálculo como complemento para o protocolo SeedPicker.  
 Licença CC BY 4.0  
 Vídeo tutorial da calculadora: EM BREVE  
 Vídeo do seedpicker: https://youtu.be/TZHdk5munuk  
+Vídeo tutorial da calculadora para cálculo de última palavra do seedpicker: EM BREVE  
 
 ## 2. BIP39Colors
 Esquema montado por EnteroPositivo para conversão de seed BIP39 para códigos de cores HEX.  
@@ -33,9 +36,14 @@ Licença GNU GPL v3.0
 Fonte: https://github.com/BitcoinQnA/seedtool  
 Vídeo tutorial: https://youtu.be/dDY6ikv9WXI  
 
+_________________________________
 
-### Playlist de vídeos sobre Criação de Seed BIP39 para se aprofundar:
-  https://www.youtube.com/playlist?list=PLgcVYwONyxmiz-CzJmqQHKyJm8-t6Tp8p
+### [Playlist de vídeos sobre Criação de Seed BIP39 para se aprofundar](https://www.youtube.com/playlist?list=PLgcVYwONyxmiz-CzJmqQHKyJm8-t6Tp8p)
+https://www.youtube.com/playlist?list=PLgcVYwONyxmiz-CzJmqQHKyJm8-t6Tp8p
 
+
+![image](https://github.com/bitcoinheiro/bitcinto/assets/50273260/ec55af00-00d1-4328-9436-c1824bc4bd2b)
+
+_________________________________
 
 *Este repositório é livre para ser baixado e usado offline voluntariamente, sem nenhuma garantia ou responsabilidade por parte dos seus autores. A responsabilidade de utilização deste repositório é única e exclusiva do usuário que decidir baixar e executar suas ferramentas.*
