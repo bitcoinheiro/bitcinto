@@ -14,9 +14,9 @@ Estas são as ferramentas incluídas no pacote:
 Esquema montado por bitdov para cálculo de seed BIP39 completa jogando moedas par inserindo bits.  
 Baseada nos mesmos princípios, há também uma tabela de cálculo como complemento para o protocolo SeedPicker.  
 Licença CC BY 4.0  
-Vídeo tutorial da calculadora: EM BREVE  
-Vídeo do seedpicker: https://youtu.be/TZHdk5munuk  
-Vídeo tutorial da calculadora para cálculo de última palavra do seedpicker: EM BREVE  
+Tutorial da calculadora: EM BREVE  
+Tutorial do protocolo seedpicker: https://youtu.be/TZHdk5munuk  
+Tutorial da calculadora para o seedpicker: EM BREVE  
 
 ## 2. BIP39Colors
 Esquema montado por EnteroPositivo para conversão de seed BIP39 para códigos de cores HEX.  
