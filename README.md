@@ -11,8 +11,7 @@ Após criação e verificação da seed, você pode exportar a seed de 12 ou 24 
 Estas são as ferramentas incluídas no pacote:  
 
 ## 1. Calculadora de checksum BIP39
-Planilha e calculadora para cálculo de seed BIP39 completa jogando moeda 128 ou 256 vezes para obter uma sequência única.  
-Há também uma planilha de cálculo da última palavra de seed BIP39 para usar em conjunto com o protocolo SeedPicker.  
+Planilha e calculadora para cálculo de seed BIP39 completa jogando moeda 128 ou 256 vezes para obter uma sequência única. Há também uma planilha de cálculo da última palavra de seed BIP39 para usar em conjunto com o protocolo SeedPicker.  
 Licença CC BY 4.0  
 Tutorial da calculadora: https://youtu.be/4iczoKgsKjU  
 Tutorial do protocolo seedpicker: https://youtu.be/TZHdk5munuk  
@@ -35,6 +34,11 @@ Site offline para criação e verificação de seeds BIP39 e tudo o que se deriv
 Licença GNU GPL v3.0  
 Fonte: https://github.com/BitcoinQnA/seedtool  
 Vídeo tutorial: https://youtu.be/dDY6ikv9WXI  
+
+## docs/referencia
+Lista de palavras BIP39 em arquivos txt para importar na planilha offline:
+- Sequência binária de 11 bits (número 0 até 2047)
+- Sequência de 2048 [palavras em inglês do protocolo BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt)
 
 _________________________________
 
