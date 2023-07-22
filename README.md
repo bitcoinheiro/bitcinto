@@ -11,15 +11,15 @@ Após criação e verificação da seed, você pode exportar a seed de 12 ou 24 
 Estas são as ferramentas incluídas no pacote:  
 
 ## 1. Calculadora de checksum BIP39
-Esquema montado por bitdov para cálculo de seed BIP39 completa jogando moedas par inserindo bits.  
-Baseada nos mesmos princípios, há também uma tabela de cálculo como complemento para o protocolo SeedPicker.  
+Planilha e calculadora para cálculo de seed BIP39 completa jogando moeda 128 ou 256 vezes para obter uma sequência única.  
+Há também uma planilha de cálculo da última palavra de seed BIP39 para usar em conjunto com o protocolo SeedPicker.  
 Licença CC BY 4.0  
-Tutorial da calculadora: EM BREVE  
+Tutorial da calculadora: https://youtu.be/4iczoKgsKjU  
 Tutorial do protocolo seedpicker: https://youtu.be/TZHdk5munuk  
 Tutorial da calculadora para o seedpicker: EM BREVE  
 
 ## 2. BIP39Colors
-Esquema montado por EnteroPositivo para conversão de seed BIP39 para códigos de cores HEX.  
+Ferramenta de conversão de seed BIP39 para códigos de cores HEX, com objetivo de esconder a seed em imagens digitais armazenadas offline.  
 Licença CC-BY-4.0  
 Fonte: https://github.com/enteropositivo/bip39colors  
 Vídeo tutorial: https://youtu.be/RcIqZxy74Uo  
